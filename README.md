@@ -13,6 +13,7 @@ A low-cost wrist wearable prototype that tracks signs of patient stress (pre-op,
 ## Status (tick as you verify on real hardware)
 - [ ] Bench test passes on hardware (`firmware/bench_test`)
 - [ ] Demo firmware uploads and posts to the dashboard
+- [ ] Boards dry-fitted in the printed case (`hardware/fit_model.html` is a visual aid only until this is done)
 - [ ] Heart rate roughly matches a manual pulse count
 - [ ] Nurse call and self-report appear on the dashboard
 - [ ] Breathing guide runs from the dashboard trigger
@@ -30,5 +31,9 @@ Pins: SDA GPIO6, SCL GPIO7, GSR GPIO3, DS18B20 GPIO4, motor PWM GPIO5, button GP
 2. **Firmware:** in `firmware/axio_alert_demo`, copy `secrets.h.example` to `secrets.h` and fill in your 2.4 GHz Wi-Fi and your laptop's IP. In Arduino IDE choose ESP32C3 Dev Module (core 3.x), enable USB CDC On Boot, install OneWire and DallasTemperature, upload.
 3. Keep the laptop and the wearable on the same network (a phone hotspot works) and allow Python through the firewall.
 
+## 3D fit model and wiring
+- `hardware/fit_model.html`: interactive 3D model of the enclosure (cavity 66 x 46 x 22 mm) with the boards and the wire runs from the wiring diagram. Open it in a browser (it needs internet to load the 3D library). Board pin positions and wire routes are approximations that have not yet been checked against a physical dry-fit.
+- `hardware/wiring_diagram_A4.pdf`: prototype wiring diagram with every wire numbered W1 to W32.
+
 ## Layout
-`firmware/bench_test` tests each part from the Serial Monitor. `firmware/axio_alert_demo` is the demo firmware. `dashboard` is the Flask app and simulator.
+`firmware/bench_test` tests each part from the Serial Monitor. `firmware/axio_alert_demo` is the demo firmware. `dashboard` is the Flask app and simulator. `hardware` holds the 3D fit model and the wiring diagram.
