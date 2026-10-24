@@ -1,6 +1,3 @@
-"""Axio Alert ward dashboard (prototype, not a medical device).
-Run:  pip install flask   then   python app.py   ->  http://localhost:5000
-ESP32 (or sim.py) POSTs JSON to /data. Everything is kept in memory."""
 import csv, io, threading, time
 from collections import deque
 from flask import Flask, jsonify, request, Response
